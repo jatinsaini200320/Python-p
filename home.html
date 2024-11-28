@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body   >
+    <div class="hero-image"></div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="#" method="post">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="actions">
+                <button type="submit" onclick="login(event)" href="dashboard.html">Login</button>
+            </div>
+            <script>
+                function login() {
+                    // Here you can add form validation, or check credentials if needed.
+                    // For example, you could check if the username and password are correct.
+        
+                    // If login is successful, redirect to the dashboard page.
+                    // Assuming the dashboard page is called "dashboard.html"
+                    window.location.href = 'dashboard.html';
+                }
+            </script>
+
+            <div class="options">
+                <a href="#" id="create-account-link" onclick="showCreateAccount()">Create Account</a> | 
+                <a href="#" id="forgot-password-link" onclick="showForgotPassword()">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="create-account-container" class="hidden">
+        <h2>Create Account</h2>
+        <form id="create-account-form">
+            <div class="input-group">
+                <label for="new-username">Username</label>
+                <input type="text" id="new-username" required>
+            </div>
+            <div class="input-group">
+                <label for="new-password">Password</label>
+                <input type="password" id="new-password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+            <div class="actions">
+                <button type="submit" onclick="createAccount(event)">Create Account</button>
+            </div>
+            <button type="button" onclick="goBack()">Back to Login</button>
+        </form>
+    </div>
+
+    <div id="forgot-password-container" class="hidden">
+        <h2>Forgot Password</h2>
+        <form id="forgot-password-form">
+            <div class="input-group">
+                <label for="email">Enter your email address:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="actions">
+                <button type="submit" onclick="resetPassword(event)">Reset Password</button>
+            </div>
+            <button type="button" onclick="goBack()">Back to Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
