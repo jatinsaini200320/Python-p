@@ -1,0 +1,93 @@
+/* General Body Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('homeimg.jpg'); /* Change this path to your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #12e51d; /* Fallback color in case image is not loaded */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Container for Login, Create Account, and Forgot Password */
+.login-container,
+#create-account-container,
+#forgot-password-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Form Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Action and Option Links */
+.actions {
+    margin-top: 10px;
+}
+
+.options {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.options a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Hidden Class for Toggling Views */
+.hidden {
+    display: none;
+}
